@@ -20,8 +20,12 @@
 <header id="header" class="header d-flex align-items-center">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
-        <a href="#" class="logo d-flex align-items-center">
-            <h1 class="sitename">Компания</h1>
+        <a href="google.com" class="logo d-flex align-items-center">
+            <?php
+            if( has_custom_logo() ){
+                echo get_custom_logo();
+            }
+            ?>
         </a>
 
         <nav id="navmenu" class="navmenu">

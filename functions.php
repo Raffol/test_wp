@@ -1,4 +1,19 @@
 <?php
+if (! function_exists('testbitrix_setup')){
+    function testbitrix_setup()
+    {
+        add_theme_support('custom-logo', [
+            'height'      => 477,
+            'width'       => 630,
+            'flex-width'  => false,
+            'flex-height' => false,
+            'header-text' => '',
+            'unlink-homepage-logo' => false,
+        ]);
+    }
+    add_action('after_setup_theme', 'testbitrix_setup');
+}
+
 // Подключение стилей и скриптов
 add_action( 'wp_enqueue_scripts', 'testbitrix_scripts' );
 function testbitrix_scripts() {
