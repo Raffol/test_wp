@@ -5,7 +5,6 @@
     <?php wp_head(); ?>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Компания - шаблон главной страницы</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
 
@@ -19,17 +18,29 @@
 
 <header id="header" class="header d-flex align-items-center">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-
-        <a href="google.com" class="logo d-flex align-items-center">
             <?php
             if( has_custom_logo() ){
                 echo get_custom_logo();
             }
             ?>
-        </a>
-
         <nav id="navmenu" class="navmenu">
-            <ul>
+           <?php
+           wp_nav_menu( array(
+               'menu'            => '',              // (string) Название выводимого меню (указывается в админке при создании меню, приоритетнее
+               // чем указанное местоположение theme_location - если указано, то параметр theme_location игнорируется)
+               'container'       => 'false',           // (string) Контейнер меню. Обворачиватель ul. Указывается тег контейнера (по умолчанию в тег div)
+               'container_class' => '',              // (string) class контейнера (div тега)
+               'container_id'    => '',              // (string) id контейнера (div тега)
+               'menu_class'      => 'navbar_nav',          // (string) class самого меню (ul тега)
+               'echo'            => true,            // (boolean) Выводить на экран или возвращать для обработки
+               'link_before'     => '',              // (string) Текст перед анкором (текстом) ссылки
+               'link_after'      => '',              // (string) Текст после анкора (текста) ссылки
+               'depth'           => 2,               // (integer) Глубина вложенности (0 - неограничена, 2 - двухуровневое меню)
+               'walker'          => '',              // (object) Класс собирающий меню. Default: new Walker_Nav_Menu
+               'theme_location'  => 'header'               // (string) Расположение меню в шаблоне. (указывается ключ которым было зарегистрировано меню в функции register_nav_menus)
+           ) );
+           ?>
+            <!--<ul>
                 <li><a href="#">Главная</a></li>
                 <li><a href="#">Пункт 1</a></li>
                 <li><a href="#">Пункт 1</a></li>
@@ -55,7 +66,7 @@
                     </ul>
                 </li>
                 <li><a href="#">Пункт 6</a></li>
-            </ul>
+            </ul>-->
             <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
 
