@@ -40,33 +40,6 @@
                'theme_location'  => 'header'               // (string) Расположение меню в шаблоне. (указывается ключ которым было зарегистрировано меню в функции register_nav_menus)
            ) );
            ?>
-            <!--<ul>
-                <li><a href="#">Главная</a></li>
-                <li><a href="#">Пункт 1</a></li>
-                <li><a href="#">Пункт 1</a></li>
-                <li><a href="#">Пункт 3</a></li>
-                <li><a href="#">Пункт 4</a></li>
-                <li class="dropdown">
-                    <a href="#"><span>Пункт 5 с подменю</span>
-                        <i class="bi bi-chevron-down toggle-dropdown"></i>
-                    </a>
-                    <ul>
-                        <li><a href="#">Пункт 1</a></li>
-                        <li class="dropdown"><a href="#"><span>Пункт 2 с подменю</span> <i
-                                    class="bi bi-chevron-down toggle-dropdown"></i></a>
-                            <ul>
-                                <li><a href="#">Пункт 1</a></li>
-                                <li><a href="#">Пункт 2</a></li>
-                                <li><a href="#">Пункт 3</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Пункт 2</a></li>
-                        <li><a href="#">Пункт 3</a></li>
-                        <li><a href="#">Пункт 4</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Пункт 6</a></li>
-            </ul>-->
             <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
 
